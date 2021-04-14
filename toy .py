@@ -18,17 +18,27 @@ def check (n):
         if prime(i) ==True:
             answer.append(i)
 
-    return len(answer)
+    return answer
 
 
 
-number=input("enter a number to check the prime numbers smaller  than or equal to it:")
 
-print(check(int(number)))
+
+number=1
+while(number != 0):
+    number=int(input("please insert any number or 0 to exit "))
+    answerlist= check(number)
+    if number in answerlist and number != 0:
+        index=answerlist.index(number)
+        print(str(number)+" is a prime number and it is " + str(index+1)+"th number")
+    elif number == 0:
+        print("exit the program")
+        break
+    else:
+        print(str(number)+" is not a prime number")
+    
                        
          
-
-
 
 
 
